@@ -1,18 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | My Website</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; }
-    header, footer { background: #333; color: #fff; padding: 1rem; text-align: center; }
-    nav a { margin: 0 1rem; color: #fff; text-decoration: none; }
-    main { padding: 2rem; max-width: 800px; margin: auto; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact College Bot</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-
   <header>
     <h1>Contact Us</h1>
     <nav>
@@ -23,15 +17,30 @@
   </header>
 
   <main>
-    <h2>Get in Touch</h2>
-    <p>Email us at: <a href="mailto:support@example.com">support@example.com</a></p>
+    <section>
+      <h2>Get in Touch</h2>
+      <p>If you have any questions or feedback about College Bot, feel free to reach out.</p>
+
+      <form action="mailto:support@collegebot.com" method="post" enctype="text/plain">
+        <label for="name">Name:</label><br/>
+        <input type="text" id="name" name="name" required/><br/>
+
+        <label for="email">Email:</label><br/>
+        <input type="email" id="email" name="email" required/><br/>
+
+        <label for="message">Message:</label><br/>
+        <textarea id="message" name="message" rows="5" required></textarea><br/>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
   </main>
 
   <footer>
-    &copy; 2025 Your Company. All rights reserved.
+    <p>&copy; 2025 College Bot. All rights reserved.</p>
   </footer>
 
-  <!-- Watson Assistant Chat -->
+  <!-- Watson Assistant Chatbot Script -->
   <script>
     window.watsonAssistantChatOptions = {
       integrationID: "639eae78-cd51-4025-8cab-8e2260b730cb",
@@ -41,12 +50,11 @@
     };
     setTimeout(function(){
       const t = document.createElement('script');
-      t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + 
-              (window.watsonAssistantChatOptions.clientVersion || 'latest') + 
+      t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" +
+              (window.watsonAssistantChatOptions.clientVersion || 'latest') +
               "/WatsonAssistantChatEntry.js";
       document.head.appendChild(t);
     });
   </script>
-
 </body>
 </html>
