@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    main {
+      padding: 2rem;
+      max-width: 800px;
+      margin: 2rem auto;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #444;
+    }
+    p {
+      line-height: 1.6;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>About Us</h1>
+  </header>
+
+  <main>
+    <h2>Our Mission</h2>
+    <p>
+      We are dedicated to providing high-quality solutions that help our clients achieve their goals.
+      Our team is passionate about innovation, creativity, and delivering outstanding customer service.
+    </p>
+
+    <h2>Our Team</h2>
+    <p>
+      Our team is made up of experienced professionals with backgrounds in web development, design,
+      and digital strategy. We work collaboratively to bring ideas to life.
+    </p>
+
+    <h2>Our Story</h2>
+    <p>
+      Founded in 2020, our company started with a simple idea: to make technology more accessible and
+      useful for everyone. Since then, we’ve grown into a trusted name in the industry.
+    </p>
+  </main>
+
+  <footer>
+    &copy; 2025 Your Company Name. All rights reserved.
+  </footer>
+
+  <!-- Watson Assistant Chat Script -->
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "639eae78-cd51-4025-8cab-8e2260b730cb", // The ID of this integration.
+      region: "au-syd", // The region your integration is hosted in.
+      serviceInstanceID: "fc7224ec-82d3-4ccb-baa1-969954eeae5e", // The ID of your service instance.
+      onLoad: async (instance) => { await instance.render(); }
+    };
+    setTimeout(function(){
+      const t = document.createElement('script');
+      t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" +
+              (window.watsonAssistantChatOptions.clientVersion || 'latest') +
+              "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+</body>
+</html>

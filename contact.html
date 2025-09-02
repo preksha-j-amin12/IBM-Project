@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | My Website</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; }
+    header, footer { background: #333; color: #fff; padding: 1rem; text-align: center; }
+    nav a { margin: 0 1rem; color: #fff; text-decoration: none; }
+    main { padding: 2rem; max-width: 800px; margin: auto; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Contact Us</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Get in Touch</h2>
+    <p>Email us at: <a href="mailto:support@example.com">support@example.com</a></p>
+  </main>
+
+  <footer>
+    &copy; 2025 Your Company. All rights reserved.
+  </footer>
+
+  <!-- Watson Assistant Chat -->
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "639eae78-cd51-4025-8cab-8e2260b730cb",
+      region: "au-syd",
+      serviceInstanceID: "fc7224ec-82d3-4ccb-baa1-969954eeae5e",
+      onLoad: async (instance) => { await instance.render(); }
+    };
+    setTimeout(function(){
+      const t = document.createElement('script');
+      t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + 
+              (window.watsonAssistantChatOptions.clientVersion || 'latest') + 
+              "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+
+</body>
+</html>
